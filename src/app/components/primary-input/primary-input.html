@@ -1,1 +1,14 @@
-<p>primary-input works!</p>
+<div class="">
+  <label [for]="inputName">{{ label }}</label>
+  <div class="">
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      [value]="value"
+      (input)="onInput($event)"
+    />
+    <div class="">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
