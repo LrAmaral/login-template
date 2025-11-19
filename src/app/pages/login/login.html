@@ -1,0 +1,10 @@
+<app-default-login-layout
+  login="Acesse sua conta"
+  primaryBtnText="Acessar"
+  secondaryBtnText="Criar conta"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!loginForm.valid"
+>
+  <form [formGroup]="loginForm"></form
+></app-default-login-layout>
