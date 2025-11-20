@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, importProvidersFrom } from '@angular/core';
 import { DefaultLoginLayout } from 'src/app/components/default-login-layout/default-login-layout';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -14,14 +14,9 @@ interface LoginForm {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [
-    DefaultLoginLayout,
-    ReactiveFormsModule,
-    PrimaryInput
-  ],
-  providers: [LoginService],
+  imports: [DefaultLoginLayout, ReactiveFormsModule, PrimaryInput],
   templateUrl: './login.html',
-  styleUrl: './login.css',
+  styleUrls: ['./login.css'],
 })
 export class Login {
   loginForm!: FormGroup<LoginForm>;

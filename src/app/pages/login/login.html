@@ -6,5 +6,29 @@
   (navigate)="navigate()"
   [disablePrimaryBtn]="!loginForm.valid"
 >
-  <form [formGroup]="loginForm"></form></app-default-login-layout
->
+  <form [formGroup]="loginForm">
+    <app-primary-input
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="johndoe@gmail.com"
+    >
+      <img src="/assets/icons/email-icon.svg" /> </app-primary-input
+    ><app-primary-input
+      formControlName="password"
+      inputName="password"
+      [type]="showPassword ? 'text' : 'password'"
+      label="Senha"
+      placeholder="**********"
+      class="password"
+    >
+    <p>Hello worldd</p>
+      <!-- <button (click)="togglePassword()">
+        <lucide-eye *ngIf="!showPassword"></lucide-eye>
+        <lucide-eye-off *ngIf="showPassword"></lucide-eye-off>
+      </button> -->
+      <img src="/assets/icons/password-icon.svg" />
+    </app-primary-input>
+  </form>
+</app-default-login-layout>

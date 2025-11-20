@@ -1,17 +1,18 @@
 import { Routes } from '@angular/router';
-import { Login } from './pages/login/login';
 import { Signup } from './pages/signup/signup';
 import { User } from './pages/user/user';
-import { Home } from './pages/home/home';
+import { Login } from './pages/login/login';
 
 export const routes: Routes = [
   {
-    path: '',
-    component: Login,
-  },
-  {
     path: 'login',
     component: Login,
+    // canActivate: [loginAuthGuard]
+  },
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full',
   },
   {
     path: 'signup',
