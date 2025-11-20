@@ -1,31 +1,37 @@
-<main class="flex flex-col md:flex-row h-full">
-  <section class="w-full flex flex-col h-full">
-    <img src="/assets/images/logo.svg" alt="" />
-    <h2>{{ login }}</h2>
-    <ng-content></ng-content>
-    <div class="">
-      <button class="" (click)="submit()" [disabled]="disablePrimaryBtn">
-        {{ primaryBtnText }}
-      </button>
-      <div class="">
-        <div class=""></div>
-        <span>OU</span>
-        <div class=""></div>
-      </div>
-      <button class="" (click)="navigate()">
-        {{ secondaryBtnText }}
-      </button>
-    </div>
-  </section>
-  <section>
-    <div class="">
-      <h1 class="font-semibold">Introduzindo ao REduce</h1>
+<main class="flex flex-col md:flex-row h-dvh justify-center items-center space-y-4">
+  <section class="md:flex-1 space-y-8 bg-primary h-full p-4 text-white">
+    <div class="md:w-1/2 flex flex-col space-y-2">
+      <h1 class="font-bold text-xl">Introduzindo ao REduce</h1>
       <p>
         O REduce é um CRM que facilita a gestão de clientes, automatizando processos e oferecendo
         insights para decisões mais estratégicas. Ideal para empresas que buscam otimizar o
         atendimento e a eficiência.
       </p>
     </div>
-    <img src="/assets/images/work.svg" alt="" />
+  </section>
+  <section class="w-full md:w-[700px] flex flex-col h-auto p-4 m-4 gap-4">
+    <img src="../../../assets/images/logo.svg" alt="" class="w-40 h-32" />
+    <h2 class="font-semibold text-lg md:text-xl">{{ login }}</h2>
+    <ng-content></ng-content>
+    <div class="space-y-2">
+      <button
+        class="border rounded-lg font-semibold border-primary p-3 w-full cursor-pointer text-white bg-primary hover:bg-secondary transition-all ease-in-out"
+        (click)="submit()"
+        [disabled]="disablePrimaryBtn"
+      >
+        {{ primaryBtnText }}
+      </button>
+      <div class="flex justify-center items-center w-full">
+        <div class=""></div>
+        <span class="font-semibold text-sm">OU</span>
+        <div class=""></div>
+      </div>
+      <button
+        class="border rounded-lg font-semibold border-primary p-3 w-full cursor-pointer text-white bg-primary hover:bg-secondary transition-all ease-in-out"
+        (click)="navigate()"
+      >
+        {{ secondaryBtnText }}
+      </button>
+    </div>
   </section>
 </main>

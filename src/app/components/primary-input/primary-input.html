@@ -1,11 +1,12 @@
 <div class="">
   <label [for]="inputName">{{ label }}</label>
-  <div class="">
+  <div class="space-y-2">
     <input
       [type]="type"
       [placeholder]="placeholder"
       [value]="value"
       (input)="onInput($event)"
+      class="w-full border-none rounded-lg bg-gray-secondary p-3"
     />
     <div class="">
       <ng-content></ng-content>
