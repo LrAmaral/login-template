@@ -1,14 +1,14 @@
-<div class="">
+<div class="space-y-2 mb-4">
   <label [for]="inputName">{{ label }}</label>
-  <div class="space-y-2">
+  <div class="flex w-full">
     <input
       [type]="type"
       [placeholder]="placeholder"
       [value]="value"
       (input)="onInput($event)"
-      class="w-full border-none rounded-lg bg-gray-secondary p-3"
+      class="w-full border-none rounded-l-lg bg-gray-secondary p-3"
     />
-    <div class="">
+    <div class="rounded-r-lg p-3 bg-primary h-auto">
       <ng-content></ng-content>
     </div>
   </div>

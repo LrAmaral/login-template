@@ -14,7 +14,7 @@
       label="Email"
       placeholder="johndoe@gmail.com"
     >
-      <img src="assets/icons/mail.svg" alt="Email" class="" />
+      <img src="assets/icons/mail-white.svg" alt="Email Icon" />
     </app-primary-input>
     <app-primary-input
       formControlName="password"
@@ -22,13 +22,12 @@
       [type]="showPassword ? 'text' : 'password'"
       label="Senha"
       placeholder="**********"
-      class="password"
     >
-      <button (click)="togglePassword()">
+      <!-- <button (click)="togglePassword()">
         <img *ngIf="!showPassword" src="assets/icons/eye.svg" alt="Eye Icon" />
         <img *ngIf="showPassword" src="assets/icons/eye-off." alt="Eye Off Icon" />
-      </button>
-      <img src="/assets/icons/password-icon.svg" />
+      </button> -->
+      <img src="/assets/icons/lock-white.svg" alt="Password Icon" />
     </app-primary-input>
   </form>
 </app-default-login-layout>
