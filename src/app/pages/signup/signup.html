@@ -14,7 +14,7 @@
       label="Nome"
       placeholder="John Doe"
     >
-      <img src="/assets/icons/email-icon.svg" />
+      <img src="/assets/icons/mail.svg" />
     </app-primary-input>
     <app-primary-input
       formControlName="email"
@@ -31,7 +31,7 @@
       type="password"
       label="Sua senha"
     >
-      <img src="/assets/icons/password-icon.svg" />
+      <img src="/assets/icons/lock.svg" />
     </app-primary-input>
     <app-primary-input
       formControlName="passwordConfirm"
@@ -40,11 +40,11 @@
       label="Confirme sua senha"
       class="password"
     >
-      <button (click)="togglePassword()">
+      <!-- <button (click)="togglePassword()">
         <img *ngIf="!showPassword" src="assets/icons/eye.svg" alt="Eye Icon" />
         <img *ngIf="showPassword" src="assets/icons/eye-off." alt="Eye Off Icon" />
-      </button>
-      <img src="/assets/icons/password-icon.svg" />
+      </button> -->
+      <img src="/assets/icons/lock.svg" />
     </app-primary-input>
   </form>
 </app-default-login-layout>
