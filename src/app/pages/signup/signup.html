@@ -23,7 +23,7 @@
       label="Email"
       placeholder="johndoe@gmail.com"
     >
-      <img src="/assets/icons/email-icon.svg" />
+      <img src="assets/icons/mail.svg" alt="Email" class="" />
     </app-primary-input>
     <app-primary-input
       formControlName="password"
@@ -40,11 +40,10 @@
       label="Confirme sua senha"
       class="password"
     >
-      <!-- <button (click)="togglePassword()" type="button">
-        <mat-icon>{{
-          showPassword ? "visibility_off" : "visibility"
-        }}</mat-icon>
-      </button> -->
+      <button (click)="togglePassword()">
+        <img *ngIf="!showPassword" src="assets/icons/eye.svg" alt="Eye Icon" />
+        <img *ngIf="showPassword" src="assets/icons/eye-off." alt="Eye Off Icon" />
+      </button>
       <img src="/assets/icons/password-icon.svg" />
     </app-primary-input>
   </form>
