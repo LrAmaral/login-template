@@ -22,11 +22,12 @@
       [type]="showPassword ? 'text' : 'password'"
       label="Senha"
       placeholder="**********"
+      class="relative"
     >
-      <!-- <button (click)="togglePassword()">
+      <button (click)="togglePassword()" class="absolute right-14 border-none">
         <img *ngIf="!showPassword" src="assets/icons/eye.svg" alt="Eye Icon" />
-        <img *ngIf="showPassword" src="assets/icons/eye-off." alt="Eye Off Icon" />
-      </button> -->
+        <img *ngIf="showPassword" src="assets/icons/eye-off.svg" alt="Eye Off Icon" />
+      </button>
       <img src="/assets/icons/lock.svg" alt="Password Icon" />
     </app-primary-input>
   </form>

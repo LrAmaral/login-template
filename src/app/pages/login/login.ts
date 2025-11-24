@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { LoginService } from '../../services/login';
 import { PrimaryInput } from 'src/app/components/primary-input/primary-input';
 import { ToastrService } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 
 interface LoginForm {
   email: FormControl;
@@ -14,7 +15,7 @@ interface LoginForm {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [DefaultLoginLayout, ReactiveFormsModule, PrimaryInput],
+  imports: [DefaultLoginLayout, ReactiveFormsModule, CommonModule, PrimaryInput],
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })
