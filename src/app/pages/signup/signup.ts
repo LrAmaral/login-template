@@ -5,6 +5,7 @@ import { PrimaryInput } from '../../components/primary-input/primary-input';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login';
 import { ToastrService } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 
 interface SignupForm {
   name: FormControl;
@@ -16,7 +17,7 @@ interface SignupForm {
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [DefaultLoginLayout, ReactiveFormsModule, PrimaryInput],
+  imports: [DefaultLoginLayout, ReactiveFormsModule, CommonModule, PrimaryInput],
   providers: [LoginService],
   templateUrl: './signup.html',
   styleUrl: './signup.css',

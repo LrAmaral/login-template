@@ -28,10 +28,15 @@
     <app-primary-input
       formControlName="password"
       inputName="password"
-      type="password"
+      [type]="showPassword ? 'text' : 'password'"
       label="Sua senha"
       placeholder="**********"
+      class="relative"
     >
+      <button (click)="togglePassword()" class="absolute right-14 border-none">
+        <img *ngIf="!showPassword" src="assets/icons/eye.svg" alt="Eye Icon" />
+        <img *ngIf="showPassword" src="assets/icons/eye-off.svg" alt="Eye Off Icon" />
+      </button>
       <img src="/assets/icons/lock.svg" />
     </app-primary-input>
     <app-primary-input
@@ -40,12 +45,12 @@
       [type]="showPassword ? 'text' : 'password'"
       label="Confirme sua senha"
       placeholder="**********"
-      class="password"
+      class="relative"
     >
-      <!-- <button (click)="togglePassword()">
+      <button (click)="togglePassword()" class="absolute right-14 border-none">
         <img *ngIf="!showPassword" src="assets/icons/eye.svg" alt="Eye Icon" />
-        <img *ngIf="showPassword" src="assets/icons/eye-off." alt="Eye Off Icon" />
-      </button> -->
+        <img *ngIf="showPassword" src="assets/icons/eye-off.svg" alt="Eye Off Icon" />
+      </button>
       <img src="/assets/icons/lock.svg" />
     </app-primary-input>
   </form>
