@@ -1,12 +1,75 @@
 <main class="flex flex-col md:flex-row h-dvh justify-center items-center space-y-4">
-  <section class="md:flex-1 space-y-6 hidden md:block md:bg-primary h-full p-4 text-white">
-    <div class="md:w-1/2 flex flex-col space-y-2">
+  <section
+    class="lg:flex-1 space-y-6 justify-center items-center hidden lg:flex lg:flex-col lg:bg-gradient-to-r from-secondary to-primary h-full p-4 text-white"
+  >
+    <div class="md:w-3/4 flex flex-col space-y-2 animate-fade-in">
       <h1 class="font-bold text-xl">Introduzindo ao REduce</h1>
-      <p>
+      <p class="font-medium">
         O REduce é um CRM que facilita a gestão de clientes, automatizando processos e oferecendo
         insights para decisões mais estratégicas. Ideal para empresas que buscam otimizar o
         atendimento e a eficiência.
       </p>
+    </div>
+    <div class="md:w-3/4 flex flex-col space-y-2">
+      <h2 class="font-bold text-lg">Principais Benefícios</h2>
+      <ul class="space-y-2">
+        <li class="flex items-center space-x-2">
+          <svg
+            class="w-5 h-5 text-yellow-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+          <span>Automação de Processos</span>
+        </li>
+        <li class="flex items-center space-x-2">
+          <svg
+            class="w-5 h-5 text-green-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+          <span>Visão Estratégica de Dados</span>
+        </li>
+        <li class="flex items-center space-x-2">
+          <svg
+            class="w-5 h-5 text-blue-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+          <span>Melhoria no Atendimento ao Cliente</span>
+        </li>
+        <li class="flex items-center space-x-2">
+          <svg
+            class="w-5 h-5 text-red-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+          <span>Redução de Custos Operacionais</span>
+        </li>
+      </ul>
+    </div>
+    <div class="md:w-3/4 flex justify-start items-center mt-6">
+      <a
+        href="#demonstração"
+        class="bg-primary flex gap-2 justify-center items-center px-6 py-3 rounded-lg text-lg font-medium text-white hover:bg-secondary transition duration-200"
+      >
+        Veja como funciona <img src="assets/icons/move-right.svg" alt="Move right" />
+      </a>
     </div>
   </section>
   <section class="w-full md:w-[600px] flex flex-col h-auto p-6 md:p-8 m-4 gap-4">
