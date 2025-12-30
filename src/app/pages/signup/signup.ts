@@ -58,7 +58,7 @@ export class SignUp {
         error: (error) => {
           this.toastService.error('Erro inesperado, tente novamente mais tarde');
           console.log(error);
-          this.loginErrorMessage = error.error.message;
+          this.loginErrorMessage = error.error?.message || 'Erro desconhecido';
         },
       });
   }

@@ -36,8 +36,11 @@ export class Login {
 
   submit() {
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
-      next: () => this.toastService.success('Login feito com sucesso!'),
-      error: () => this.toastService.error('Erro inesperado, tente novamente mais tarde'),
+      next: () => {
+        this.toastService.success('Login feito com sucesso!');
+        this.router.navigate(['/home']);
+      },
+      error: (error) => this.toastService.error(error.error?.message || 'Erro inesperado, tente novamente mais tarde'),
     });
   }
 
