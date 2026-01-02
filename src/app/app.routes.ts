@@ -3,6 +3,7 @@ import { User } from './pages/user/user';
 import { Login } from './pages/login/login';
 import { SignUp } from './pages/signup/signup';
 import { Home } from './pages/home/home';
+import { AuthGuard } from './services/auth-guard.service';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,7 @@ export const routes: Routes = [
   },
   {
     path: 'home',
+    canActivate: [AuthGuard],
     component: Home,
   },
   // {
