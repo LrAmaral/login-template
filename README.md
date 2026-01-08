@@ -1,12 +1,6 @@
-# CRM 
+## 🔐 Login Template
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
-
-````markdown
-# 💼 CRM Study Project
-
-A simple **CRM system** built with **Angular** for learning and practice.  
-The goal is to explore components, routing, and basic frontend concepts.
+This project is a modern, responsive **Login Page** template built with **Angular** and **Tailwind CSS**. It provides a clean starting point for authentication interfaces with built-in validation and mobile-first design.
 
 ---
 
@@ -21,30 +15,41 @@ ng serve
 
 # 3. Open in your browser
 http://localhost:4200/
-````
+
+```
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 src/
  ├── app/
- │   ├── components/   # Reusable UI parts
- │   ├── pages/        # Main screens (Login, Dashboard, etc.)
- │   └── services/     # App logic and data handling
- └── assets/           # Images and styles
+ │   ├── components/   # Shared UI elements (buttons, inputs)
+ │   ├── pages/        # Login page implementation
+ │   └── services/     # Auth logic and API interaction
+ └── assets/           # Icons, logos, and global styles
+
 ```
+
+---
+
+## 🛠️ Features
+
+* **Tailwind UI**: Fully responsive layout using utility-first CSS.
+* **Reactive Forms**: Robust validation for email and password fields.
+* **Modular Design**: Easily extractable components for any project.
 
 ---
 
 ## 🧠 Purpose
 
-> This project is for **study and practice only** — not for production use.
+> This template is for **study and practice** only. It focuses on frontend architecture and UI/UX patterns using Angular.
 
 ---
 
 ## 📚 Resources
 
 * 📘 [Angular Documentation](https://angular.io/docs)
+* 🎨 [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 * 💻 [Angular CLI Reference](https://angular.io/cli)
