@@ -21,7 +21,7 @@
     <div class="space-y-2">
       <button
         class="border rounded-3xl font-semibold border-primary p-3 w-full cursor-pointer text-white bg-primary hover:bg-secondary transition-all ease-in-out"
-        (click)="submit()"
+        (click)="handleSubmit()"
         [disabled]="disablePrimaryBtn"
       >
         {{ primaryBtnText }}
@@ -31,7 +31,14 @@
         <span class="font-semibold text-sm">OR</span>
         <div class="w-full h-0.5 bg-zinc-300 ml-2"></div>
       </div>
-      <a href="/signup" class="">{{ secondaryBtnText }}</a>
+      <span [ngSwitch]="currentRoute">
+        <a *ngIf="currentRoute.includes('login')" (click)="handleNavigate()"
+          >Have an account? Log in</a
+        >
+        <a *ngIf="currentRoute.includes('signup')" (click)="handleNavigate()"
+          >Don't have an account? Signup here</a
+        >
+      </span>
     </div>
   </section>
 </main>

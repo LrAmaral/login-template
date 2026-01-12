@@ -1,25 +1,40 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-default-login-layout',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './default-login-layout.html',
   styleUrls: ['./default-login-layout.css'],
 })
 export class DefaultLoginLayout {
   @Input() login: string = '';
   @Input() primaryBtnText: string = '';
-  @Input() secondaryBtnText: string = '';
-  @Output('submit') onSubmit = new EventEmitter();
-  @Output('navigate') onNavigate = new EventEmitter();
+  @Input() routeText: string = '';
+  @Input() route: string = '';
   @Input() disablePrimaryBtn: boolean = true;
 
-  submit() {
-    this.onSubmit.emit();
+  @Output() submitEvent = new EventEmitter<void>();
+  @Output() navigateEvent = new EventEmitter<void>();
+
+  currentRoute = '';
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.currentRoute = event.urlAfterRedirects;
+      });
   }
 
-  navigate() {
-    this.onNavigate.emit();
+  handleSubmit() {
+    this.submitEvent.emit();
+  }
+
+  handleNavigate() {
+    this.navigateEvent.emit();
   }
 }
