@@ -1,7 +1,7 @@
 <app-default-login-layout
-  login="Crie sua conta e acesse!"
-  primaryBtnText="Criar conta"
-  secondaryBtnText="Acessar conta"
+  login="Create your account and access!"
+  primaryBtnText="Create account"
+  secondaryBtnText="Have an account? Log in"
   (submit)="submit()"
   (navigate)="navigate()"
   [disablePrimaryBtn]="!signupForm.valid"
@@ -29,7 +29,7 @@
       formControlName="password"
       inputName="password"
       [type]="showPassword ? 'text' : 'password'"
-      label="Sua senha"
+      label="Your password"
       placeholder="**********"
       class="relative"
     >
@@ -43,7 +43,7 @@
       formControlName="passwordConfirm"
       inputName="passwordConfirm"
       [type]="showPassword ? 'text' : 'password'"
-      label="Confirme sua senha"
+      label="Confirm your password"
       placeholder="**********"
       class="relative"
     >

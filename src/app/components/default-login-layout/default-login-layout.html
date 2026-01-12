@@ -20,23 +20,18 @@
     <ng-content></ng-content>
     <div class="space-y-2">
       <button
-        class="border rounded-lg font-semibold border-primary p-3 w-full cursor-pointer text-white bg-primary hover:bg-secondary transition-all ease-in-out"
+        class="border rounded-3xl font-semibold border-primary p-3 w-full cursor-pointer text-white bg-primary hover:bg-secondary transition-all ease-in-out"
         (click)="submit()"
         [disabled]="disablePrimaryBtn"
       >
         {{ primaryBtnText }}
       </button>
-      <div class="flex justify-center text-zinc-300 items-center w-full">
+      <div class="flex justify-center text-zinc-300 items-center h-8 md:h-20 w-full">
         <div class="w-full h-0.5 bg-zinc-300 mr-2"></div>
-        <span class="font-semibold text-sm">OU</span>
+        <span class="font-semibold text-sm">OR</span>
         <div class="w-full h-0.5 bg-zinc-300 ml-2"></div>
       </div>
-      <button
-        class="border rounded-lg font-semibold border-primary p-3 w-full cursor-pointer text-white bg-primary hover:bg-secondary transition-all ease-in-out"
-        (click)="navigate()"
-      >
-        {{ secondaryBtnText }}
-      </button>
+      <a href="/signup" class="">{{ secondaryBtnText }}</a>
     </div>
   </section>
 </main>
