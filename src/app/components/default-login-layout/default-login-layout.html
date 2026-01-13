@@ -32,12 +32,15 @@
         <div class="w-full h-0.5 bg-zinc-300 ml-2"></div>
       </div>
       <span [ngSwitch]="currentRoute">
-        <a *ngIf="currentRoute.includes('login')" (click)="handleNavigate()"
-          >Have an account? Log in</a
-        >
-        <a *ngIf="currentRoute.includes('signup')" (click)="handleNavigate()"
-          >Don't have an account? Signup here</a
-        >
+        <a *ngIf="router.url === '/signup'" href="/login">
+          Have an account?
+          <span class="font-semibold">Log in</span>
+        </a>
+
+        <a *ngIf="router.url === '/login'" href="/signup">
+          Don't have an account?
+          <span class="font-semibold">Signup here</span>
+        </a>
       </span>
     </div>
   </section>

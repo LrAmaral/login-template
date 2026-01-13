@@ -22,7 +22,9 @@ export class DefaultLoginLayout {
 
   currentRoute = '';
 
-  constructor(private router: Router) {
+  constructor(public router: Router) {
+    this.currentRoute
+
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
@@ -32,9 +34,5 @@ export class DefaultLoginLayout {
 
   handleSubmit() {
     this.submitEvent.emit();
-  }
-
-  handleNavigate() {
-    this.navigateEvent.emit();
   }
 }
