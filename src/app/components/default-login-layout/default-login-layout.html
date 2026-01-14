@@ -3,22 +3,20 @@
     class="lg:flex-1 space-y-6 justify-center items-center hidden lg:flex lg:flex-col lg:bg-gradient-to-r from-zinc-700 to-zinc-800 h-full p-4 text-white"
   >
     <div class="md:w-3/4 flex flex-col space-y-2 animate-fade-in">
-      <h1 class="font-bold text-xl">Title</h1>
+      <h1 class="font-bold text-xl">LogiX</h1>
       <p class="font-medium">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo quasi incidunt
         rerum, libero obcaecati iure id tenetur beatae veritatis sed possimus voluptatem dignissimos
         impedit corporis, sapiente recusandae error voluptas.
       </p>
     </div>
-    <div class="md:w-3/4 flex flex-col space-y-2">
-      <p>Content here</p>
-    </div>
-    <div class="md:w-3/4 flex justify-start items-center mt-6">Content here if you want...</div>
   </section>
-  <section class="w-full md:w-[600px] flex flex-col h-auto p-6 md:p-8 m-4 gap-4">
+  <section
+    class="w-full md:w-[728px] flex flex-col justify-center items-center h-auto p-6 md:p-8 m-4 gap-4"
+  >
     <p class="text-xl font-semibold">Logo</p>
-    <ng-content></ng-content>
-    <div class="space-y-2">
+    <div class="space-y-2 w-3/4">
+      <ng-content></ng-content>
       <button
         class="border rounded-3xl font-semibold border-primary p-3 w-full cursor-pointer text-white bg-primary hover:bg-secondary transition-all ease-in-out"
         (click)="handleSubmit()"
@@ -32,15 +30,15 @@
         <div class="w-full h-0.5 bg-zinc-300 ml-2"></div>
       </div>
       <span [ngSwitch]="currentRoute">
-        <a *ngIf="router.url === '/signup'" href="/login">
+        <span *ngIf="router.url === '/signup'">
           Have an account?
-          <span class="font-semibold">Log in</span>
-        </a>
+          <a href="/login" class="font-semibold">Log in</a>
+        </span>
 
-        <a *ngIf="router.url === '/login'" href="/signup">
+        <span *ngIf="router.url === '/login'">
           Don't have an account?
-          <span class="font-semibold">Signup here</span>
-        </a>
+          <a href="/signup" class="font-semibold">Signup here</a>
+        </span>
       </span>
     </div>
   </section>
